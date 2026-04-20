@@ -370,15 +370,27 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
 <!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo">
-    <svg width="42" height="42" viewBox="0 0 42 42" fill="none">
-      <circle cx="21" cy="21" r="20" stroke="#F0A030" stroke-width="1.2"/>
-      <line x1="10" y1="32" x2="32" y2="10" stroke="#F0A030" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="10" cy="32" r="4" stroke="#F0A030" stroke-width="1.8"/>
-      <circle cx="32" cy="10" r="4" stroke="#F0A030" stroke-width="1.8"/>
-      <line x1="32" y1="32" x2="10" y2="10" stroke="#F0A030" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="32" cy="32" r="4" stroke="#F0A030" stroke-width="1.8"/>
-      <circle cx="10" cy="10" r="4" stroke="#F0A030" stroke-width="1.8"/>
-      <circle cx="21" cy="21" r="3" fill="#F0A030"/>
+    <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer ring -->
+      <circle cx="21" cy="21" r="19.5" fill="none" stroke="#F0A030" stroke-width="2.5"/>
+      <!-- Inner ring -->
+      <circle cx="21" cy="21" r="14" fill="none" stroke="#F0A030" stroke-width="1.2"/>
+      <!-- Wrench 1 (−45°) -->
+      <g transform="translate(21,21) rotate(-45)">
+        <path fill="#F0A030" fill-rule="evenodd" d="M-13,-4.5 L-9,-4.5 L-9,-2 L9,-2 L9,-4.5 L13,-4.5 L13,4.5 L9,4.5 L9,2 L-9,2 L-9,4.5 L-13,4.5 Z M-13,-2 L-9,-2 L-9,2 L-13,2 Z M9,-2 L13,-2 L13,2 L9,2 Z"/>
+      </g>
+      <!-- Wrench 2 (+45°) -->
+      <g transform="translate(21,21) rotate(45)">
+        <path fill="#F0A030" fill-rule="evenodd" d="M-13,-4.5 L-9,-4.5 L-9,-2 L9,-2 L9,-4.5 L13,-4.5 L13,4.5 L9,4.5 L9,2 L-9,2 L-9,4.5 L-13,4.5 Z M-13,-2 L-9,-2 L-9,2 L-13,2 Z M9,-2 L13,-2 L13,2 L9,2 Z"/>
+      </g>
+      <!-- Left hex nut -->
+      <g transform="translate(13.5,21)">
+        <path fill="#F0A030" fill-rule="evenodd" d="M0,-5.5 L4.8,-2.75 L4.8,2.75 L0,5.5 L-4.8,2.75 L-4.8,-2.75 Z M0,-2.2 A2.2,2.2 0 1,0 0,2.2 A2.2,2.2 0 1,0 0,-2.2 Z"/>
+      </g>
+      <!-- Right hex nut -->
+      <g transform="translate(28.5,21)">
+        <path fill="#F0A030" fill-rule="evenodd" d="M0,-5.5 L4.8,-2.75 L4.8,2.75 L0,5.5 L-4.8,2.75 L-4.8,-2.75 Z M0,-2.2 A2.2,2.2 0 1,0 0,2.2 A2.2,2.2 0 1,0 0,-2.2 Z"/>
+      </g>
     </svg>
     <div class="nav-logo-text">
       <span class="brand">Satnam Auto</span>
@@ -403,16 +415,36 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
     <div class="hero-orb"></div>
   </div>
 
-  <svg class="hero-watermark" viewBox="0 0 200 200" fill="none">
-    <circle cx="100" cy="100" r="95" stroke="white" stroke-width="4"/>
-    <circle cx="100" cy="100" r="78" stroke="white" stroke-width="2"/>
-    <path d="M55 145 L145 55" stroke="white" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="55" cy="145" r="14" stroke="white" stroke-width="5" fill="none"/>
-    <circle cx="145" cy="55" r="14" stroke="white" stroke-width="5" fill="none"/>
-    <path d="M145 145 L55 55" stroke="white" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="145" cy="145" r="14" stroke="white" stroke-width="5" fill="none"/>
-    <circle cx="55" cy="55" r="14" stroke="white" stroke-width="5" fill="none"/>
-    <circle cx="100" cy="100" r="9" fill="white"/>
+  <svg class="hero-watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer ring thick -->
+    <circle cx="100" cy="100" r="93" fill="none" stroke="white" stroke-width="7"/>
+    <!-- Inner ring -->
+    <circle cx="100" cy="100" r="73" fill="none" stroke="white" stroke-width="3"/>
+    <!-- Arc text paths -->
+    <path id="wm-top" d="M 15,100 A 85,85 0 0,1 185,100" fill="none"/>
+    <path id="wm-btm" d="M 33,100 A 67,67 0 0,0 167,100" fill="none"/>
+    <text font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="13" letter-spacing="2.5" fill="white">
+      <textPath href="#wm-top" startOffset="50%" text-anchor="middle">SATNAM AUTO SERVICE LTD</textPath>
+    </text>
+    <text font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="13" letter-spacing="4" fill="white">
+      <textPath href="#wm-btm" startOffset="50%" text-anchor="middle">DELTA BC</textPath>
+    </text>
+    <!-- Wrench 1 (−45°) -->
+    <g transform="translate(100,100) rotate(-45)">
+      <path fill="white" fill-rule="evenodd" d="M-42,-14 L-30,-14 L-30,-6 L30,-6 L30,-14 L42,-14 L42,14 L30,14 L30,6 L-30,6 L-30,14 L-42,14 Z M-42,-6 L-30,-6 L-30,6 L-42,6 Z M30,-6 L42,-6 L42,6 L30,6 Z"/>
+    </g>
+    <!-- Wrench 2 (+45°) -->
+    <g transform="translate(100,100) rotate(45)">
+      <path fill="white" fill-rule="evenodd" d="M-42,-14 L-30,-14 L-30,-6 L30,-6 L30,-14 L42,-14 L42,14 L30,14 L30,6 L-30,6 L-30,14 L-42,14 Z M-42,-6 L-30,-6 L-30,6 L-42,6 Z M30,-6 L42,-6 L42,6 L30,6 Z"/>
+    </g>
+    <!-- Left hex nut -->
+    <g transform="translate(62,100)">
+      <path fill="white" fill-rule="evenodd" d="M0,-12 L10.4,-6 L10.4,6 L0,12 L-10.4,6 L-10.4,-6 Z M0,-5 A5,5 0 1,0 0,5 A5,5 0 1,0 0,-5 Z"/>
+    </g>
+    <!-- Right hex nut -->
+    <g transform="translate(138,100)">
+      <path fill="white" fill-rule="evenodd" d="M0,-12 L10.4,-6 L10.4,6 L0,12 L-10.4,6 L-10.4,-6 Z M0,-5 A5,5 0 1,0 0,5 A5,5 0 1,0 0,-5 Z"/>
+    </g>
   </svg>
 
   <div class="hero-content">
@@ -999,15 +1031,21 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
     <div class="footer-grid">
       <div class="footer-brand">
         <div style="display:flex;align-items:center;gap:14px;">
-          <svg width="40" height="40" viewBox="0 0 42 42" fill="none">
-            <circle cx="21" cy="21" r="20" stroke="#F0A030" stroke-width="1.2"/>
-            <line x1="10" y1="32" x2="32" y2="10" stroke="#F0A030" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="10" cy="32" r="4" stroke="#F0A030" stroke-width="1.8"/>
-            <circle cx="32" cy="10" r="4" stroke="#F0A030" stroke-width="1.8"/>
-            <line x1="32" y1="32" x2="10" y2="10" stroke="#F0A030" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="32" cy="32" r="4" stroke="#F0A030" stroke-width="1.8"/>
-            <circle cx="10" cy="10" r="4" stroke="#F0A030" stroke-width="1.8"/>
-            <circle cx="21" cy="21" r="3" fill="#F0A030"/>
+          <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="19.5" fill="none" stroke="#F0A030" stroke-width="2.5"/>
+            <circle cx="21" cy="21" r="14" fill="none" stroke="#F0A030" stroke-width="1.2"/>
+            <g transform="translate(21,21) rotate(-45)">
+              <path fill="#F0A030" fill-rule="evenodd" d="M-13,-4.5 L-9,-4.5 L-9,-2 L9,-2 L9,-4.5 L13,-4.5 L13,4.5 L9,4.5 L9,2 L-9,2 L-9,4.5 L-13,4.5 Z M-13,-2 L-9,-2 L-9,2 L-13,2 Z M9,-2 L13,-2 L13,2 L9,2 Z"/>
+            </g>
+            <g transform="translate(21,21) rotate(45)">
+              <path fill="#F0A030" fill-rule="evenodd" d="M-13,-4.5 L-9,-4.5 L-9,-2 L9,-2 L9,-4.5 L13,-4.5 L13,4.5 L9,4.5 L9,2 L-9,2 L-9,4.5 L-13,4.5 Z M-13,-2 L-9,-2 L-9,2 L-13,2 Z M9,-2 L13,-2 L13,2 L9,2 Z"/>
+            </g>
+            <g transform="translate(13.5,21)">
+              <path fill="#F0A030" fill-rule="evenodd" d="M0,-5.5 L4.8,-2.75 L4.8,2.75 L0,5.5 L-4.8,2.75 L-4.8,-2.75 Z M0,-2.2 A2.2,2.2 0 1,0 0,2.2 A2.2,2.2 0 1,0 0,-2.2 Z"/>
+            </g>
+            <g transform="translate(28.5,21)">
+              <path fill="#F0A030" fill-rule="evenodd" d="M0,-5.5 L4.8,-2.75 L4.8,2.75 L0,5.5 L-4.8,2.75 L-4.8,-2.75 Z M0,-2.2 A2.2,2.2 0 1,0 0,2.2 A2.2,2.2 0 1,0 0,-2.2 Z"/>
+            </g>
           </svg>
           <div class="nav-logo-text">
             <span class="brand">Satnam Auto</span>
