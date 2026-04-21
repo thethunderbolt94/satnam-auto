@@ -58,7 +58,7 @@ nav.scrolled { background: rgba(8,8,8,.94); backdrop-filter: blur(20px); border-
 /* Real photo background layer */
 .hero-photo {
   position: absolute; inset: 0;
-  background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAGSM7TtbYeI6m6nOZPWN27xlsPBWM6oYZTPDVYCQ3pmHQQQrlE1-0juAngTOXSOKvKRF46QfOuf4X1PLJ6kMc5tvtZHN8Vf9Py_ymK1AEs1IlZQyRCUq1BpLy98cXeTNJ4ABmma=s1360-w1360-h1020-rw');
+  background-image: url('hero.jpg');
   background-size: cover;
   background-position: center 40%;
   opacity: .18;
@@ -140,7 +140,7 @@ section { position:relative; }
 /* Real photo in about */
 .about-photo {
   position:absolute; inset:20px;
-  background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAGSM7TtbYeI6m6nOZPWN27xlsPBWM6oYZTPDVYCQ3pmHQQQrlE1-0juAngTOXSOKvKRF46QfOuf4X1PLJ6kMc5tvtZHN8Vf9Py_ymK1AEs1IlZQyRCUq1BpLy98cXeTNJ4ABmma=s1360-w1360-h1020-rw');
+  background-image: url('about.jpg');
   background-size:cover; background-position:center;
   border-radius:2px;
   opacity:.85;
@@ -370,29 +370,7 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
 <!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo">
-    <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="21" cy="21" r="19.5" fill="none" stroke="#F0A030" stroke-width="2.5"/>
-      <circle cx="21" cy="21" r="12.5" fill="none" stroke="#F0A030" stroke-width="1"/>
-      <g transform="translate(21,21) rotate(-135)">
-        <path fill="#F0A030" fill-rule="evenodd" d="M -10,-2 L 4,-2 L 4,-4 L 8,-4 L 8,4 L 4,4 L 4,2 L -10,2 Z M 4,-1.7 L 8,-1.7 L 8,1.7 L 4,1.7 Z"/>
-      </g>
-      <g transform="translate(21,21) rotate(-45)">
-        <path fill="#F0A030" fill-rule="evenodd" d="M -10,-2 L 4,-2 L 4,-4 L 8,-4 L 8,4 L 4,4 L 4,2 L -10,2 Z M 4,-1.7 L 8,-1.7 L 8,1.7 L 4,1.7 Z"/>
-      </g>
-      <g transform="translate(14,14)">
-        <path fill="#F0A030" fill-rule="evenodd" d="M0,-3 L2.6,-1.5 L2.6,1.5 L0,3 L-2.6,1.5 L-2.6,-1.5 Z M0,-1.3 A1.3,1.3 0 0,0 0,1.3 A1.3,1.3 0 0,0 0,-1.3 Z"/>
-      </g>
-      <g transform="translate(28,14)">
-        <path fill="#F0A030" fill-rule="evenodd" d="M0,-3 L2.6,-1.5 L2.6,1.5 L0,3 L-2.6,1.5 L-2.6,-1.5 Z M0,-1.3 A1.3,1.3 0 0,0 0,1.3 A1.3,1.3 0 0,0 0,-1.3 Z"/>
-      </g>
-      <g transform="translate(21,29)">
-        <path fill="#F0A030" fill-rule="evenodd" d="M0,-3 L2.6,-1.5 L2.6,1.5 L0,3 L-2.6,1.5 L-2.6,-1.5 Z M0,-1.3 A1.3,1.3 0 0,0 0,1.3 A1.3,1.3 0 0,0 0,-1.3 Z"/>
-      </g>
-    </svg>
-    <div class="nav-logo-text">
-      <span class="brand">Satnam Auto</span>
-      <span class="sub">Delta, BC</span>
-    </div>
+    <img src="logo.png" alt="Satnam Auto Service Ltd" style="height:48px;width:48px;object-fit:contain;filter:brightness(0) invert(1);">
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -412,36 +390,7 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
     <div class="hero-orb"></div>
   </div>
 
-  <svg class="hero-watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <!-- Outer ring thick -->
-    <circle cx="100" cy="100" r="93" fill="none" stroke="white" stroke-width="7"/>
-    <!-- Inner ring -->
-    <circle cx="100" cy="100" r="73" fill="none" stroke="white" stroke-width="3"/>
-    <!-- Arc text paths -->
-    <path id="wm-top" d="M 15,100 A 85,85 0 0,1 185,100" fill="none"/>
-    <path id="wm-btm" d="M 33,100 A 67,67 0 0,0 167,100" fill="none"/>
-    <text font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="13" letter-spacing="2.5" fill="white">
-      <textPath href="#wm-top" startOffset="50%" text-anchor="middle">SATNAM AUTO SERVICE LTD</textPath>
-    </text>
-    <text font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="13" letter-spacing="4" fill="white">
-      <textPath href="#wm-btm" startOffset="50%" text-anchor="middle">DELTA BC</textPath>
-    </text>
-    <g transform="translate(100,100) rotate(-135)">
-      <path fill="white" fill-rule="evenodd" d="M -50,-10 L 20,-10 L 20,-20 L 40,-20 L 40,20 L 20,20 L 20,10 L -50,10 Z M 20,-8 L 40,-8 L 40,8 L 20,8 Z"/>
-    </g>
-    <g transform="translate(100,100) rotate(-45)">
-      <path fill="white" fill-rule="evenodd" d="M -50,-10 L 20,-10 L 20,-20 L 40,-20 L 40,20 L 20,20 L 20,10 L -50,10 Z M 20,-8 L 40,-8 L 40,8 L 20,8 Z"/>
-    </g>
-    <g transform="translate(67,67)">
-      <path fill="white" fill-rule="evenodd" d="M0,-14 L12.1,-7 L12.1,7 L0,14 L-12.1,7 L-12.1,-7 Z M0,-6 A6,6 0 0,0 0,6 A6,6 0 0,0 0,-6 Z"/>
-    </g>
-    <g transform="translate(133,67)">
-      <path fill="white" fill-rule="evenodd" d="M0,-14 L12.1,-7 L12.1,7 L0,14 L-12.1,7 L-12.1,-7 Z M0,-6 A6,6 0 0,0 0,6 A6,6 0 0,0 0,-6 Z"/>
-    </g>
-    <g transform="translate(100,140)">
-      <path fill="white" fill-rule="evenodd" d="M0,-14 L12.1,-7 L12.1,7 L0,14 L-12.1,7 L-12.1,-7 Z M0,-6 A6,6 0 0,0 0,6 A6,6 0 0,0 0,-6 Z"/>
-    </g>
-  </svg>
+  <img class="hero-watermark" src="logo.png" alt="" aria-hidden="true" style="filter:brightness(0) invert(1);">
 
   <div class="hero-content">
     <div class="hero-eyebrow">Delta, BC · Designated Inspection Facility</div>
